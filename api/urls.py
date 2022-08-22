@@ -1,7 +1,12 @@
-from django.urls import path
-from .views import TodoAPIView
+from django.urls import path, include
+from .views import TodoModelViewSet
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register(r'todo', TodoModelViewSet)
 
 urlpatterns = [
-    path('todo', TodoAPIView.as_view()),
-    path('todo/<str:pk>', TodoAPIView.as_view()) # to capture our ids
+    path('', include(router.urls)),
 ]
+
+
