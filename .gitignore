@@ -109,7 +109,7 @@ venv.bak/
 /site
 
 # django staticfiles
-# /static
+/static
 /api/data/static
 /api/static
 /media
