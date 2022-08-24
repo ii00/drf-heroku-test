@@ -3,6 +3,9 @@ pycache/
 *.py[cod]
 *$py.class
 
+# SQLlite
+db.sqlite3
+
 # app and media
 media/
 
